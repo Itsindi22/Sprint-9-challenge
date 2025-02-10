@@ -23,6 +23,10 @@ export default class AppClass extends React.Component {
   getXY = () => {
     // It it not necessary to have a state to track the coordinates.
     // It's enough to know what index the "B" is at, to be able to calculate them.
+    const x = this.state.playerIndex % 3;
+    const y = Math.floor(this.state.playerIndex / 3);
+    return [x, y];
+  
   }
 
   getXYMessage = () => {
